@@ -1,28 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dehbevv0spxwn"]
 
-[ext_resource path="res://assets/tracks/TD racing assets.png" type="Texture2D" id=1]
-
-[sub_resource type="TileSet" id=1]
-0/name = "TD racing assets.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 176, 224, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
+[sub_resource type="TileSet" id="TileSet_euwps"]
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Pista"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 
 [node name="Track" type="Node2D"]
 
-[node name="Estrada" type="TileMap" parent="."]
-show_behind_parent = true
-tile_set = SubResource( 1 )
-cell_tile_origin = 1
-collision_layer = 2
-format = 1
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_euwps")

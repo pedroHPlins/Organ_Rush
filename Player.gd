@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
 # Configurações de movimento
-@export var max_speed = 500
-@export var acceleration = 800
+@export var max_speed = 250
+@export var acceleration = 80
 @export var steering = 2.5
 @export var friction = 0.97
 @export var drift_factor = 0.95
 
-var velocity = Vector2.ZERO
 var speed = 0
 var drift = false
 

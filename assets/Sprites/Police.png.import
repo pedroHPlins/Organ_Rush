@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caiqq3rdyt58y"
-path="res://.godot/imported/Grass_Tile.png-762d9a6f629e70e4f8b85333079936b7.ctex"
+uid="uid://cgtql4heamlct"
+path="res://.godot/imported/Police.png-6843679ae67ff90aebde11c0b8cc3b7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tracks/Grass_Tile.png"
-dest_files=["res://.godot/imported/Grass_Tile.png-762d9a6f629e70e4f8b85333079936b7.ctex"]
+source_file="res://assets/Sprites/Police.png"
+dest_files=["res://.godot/imported/Police.png-6843679ae67ff90aebde11c0b8cc3b7f.ctex"]
 
 [params]
 

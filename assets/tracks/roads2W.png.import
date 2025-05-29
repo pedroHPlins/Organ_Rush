@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce6o0jkioif62"
-path="res://.godot/imported/TD racing assets.png-b327ef2760a2abffaeb95a3cc16f9431.ctex"
+uid="uid://c8205mrqga2lv"
+path="res://.godot/imported/roads2W.png-ba94592a307e420206f59ed44e289d8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tracks/TD racing assets.png"
-dest_files=["res://.godot/imported/TD racing assets.png-b327ef2760a2abffaeb95a3cc16f9431.ctex"]
+source_file="res://assets/tracks/roads2W.png"
+dest_files=["res://.godot/imported/roads2W.png-ba94592a307e420206f59ed44e289d8a.ctex"]
 
 [params]
 

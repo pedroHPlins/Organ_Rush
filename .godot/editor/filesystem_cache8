@@ -1,15 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747783248
-default_env.tres::Environment::-1::1747783219::0::1::::<><>::
+::res://::1748550579
+default_env.tres::Environment::5480815651952970539::1748497298::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1747777593::0::1::::<><>::
 icon.png::CompressedTexture2D::8199163020172649188::1747696983::1747783251::1::::<><>::
-Main.tscn::PackedScene::-1::1747783219::0::1::::<><>::res://Track.tscn<>res://Player.tscn
+Main.tscn::PackedScene::1304137150522173675::1748497298::0::1::::<><>::uid://dehbevv0spxwn::::res://Track.tscn<>res://Player.tscn
 Player.gd::GDScript::-1::1747783219::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::-1::1747783219::0::1::::<><>::res://Player.gd<>res://Sprites/Police.png
-Track.tscn::PackedScene::-1::1747783219::0::1::::<><>::res://assets/tracks/TD racing assets.png
-::res://assets/::1747777015
-::res://assets/tracks/::1747777015
-Grass_Tile.png::CompressedTexture2D::4790357931090062122::1532953740::1747783251::1::::<><>::
-TD racing assets.png::CompressedTexture2D::5118487623601246445::1747775476::1747783251::1::::<><>::
-::res://Sprites/::1747697978
-Police.png::CompressedTexture2D::5234190256331760675::1421421248::1747783251::1::::<><>::
+Player.tscn::PackedScene::-1::1748392086::0::1::::<><>::res://Player.gd<>uid://cgtql4heamlct::::res://assets/Sprites/Police.png
+Track.tscn::PackedScene::7454537066670039501::1748497298::0::1::::<><>::uid://c8205mrqga2lv::::res://assets/tracks/roads2W.png
+::res://assets/::1748392086
+::res://assets/Sprites/::1748392087
+Police.png::CompressedTexture2D::5234190256331760675::1421421248::1748392087::1::::<><>::
+::res://assets/tracks/::1748496780
+roads2W.png::CompressedTexture2D::7146383562714086423::1748496744::1748496780::1::::<><>::
