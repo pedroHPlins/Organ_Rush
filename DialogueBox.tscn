@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhya2bc5atgq0"]
+
+[ext_resource type="Script" path="res://DialogueBox.gd" id="1_ffs4n"]
+[ext_resource type="Texture2D" uid="uid://cgtql4heamlct" path="res://assets/Sprites/Police.png" id="1_gdw7g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10xy1"]
+bg_color = Color(0, 0, 0, 0.588235)
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_ffs4n")
+
+[node name="DialoguePanel" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -376.0
+offset_top = -184.0
+offset_right = 383.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_10xy1")
+
+[node name="TextureRect" type="TextureRect" parent="DialoguePanel"]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 127.0
+texture = ExtResource("1_gdw7g")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="DialoguePanel"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 3.0
+offset_right = 758.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.00036947, 0.0278309, 0.242602, 1)
+autowrap_mode = 2
+
+[node name="NameLabel" type="Label" parent="DialoguePanel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 132.0
+offset_right = 131.0
+offset_bottom = 171.0
+autowrap_mode = 2

@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://sty7ijite2dj"]
+[gd_scene load_steps=6 format=3 uid="uid://sty7ijite2dj"]
 
 [ext_resource type="PackedScene" uid="uid://dehbevv0spxwn" path="res://Track.tscn" id="1"]
 [ext_resource type="Script" path="res://DialogeTest.gd" id="1_eu5bx"]
 [ext_resource type="PackedScene" uid="uid://c0ycsxtpvq4j1" path="res://Player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://bhya2bc5atgq0" path="res://DialogueBox.tscn" id="2_xjed2"]
-[ext_resource type="Texture2D" uid="uid://do20atxlgd7ga" path="res://icon.png" id="5_koqrl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1o66"]
 radius = 10.0499
@@ -24,9 +23,5 @@ collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTriggerPoint"]
 shape = SubResource("CircleShape2D_m1o66")
-
-[node name="Sprite2D" type="Sprite2D" parent="DialogueTriggerPoint"]
-scale = Vector2(0.328125, 0.3125)
-texture = ExtResource("5_koqrl")
 
 [connection signal="body_entered" from="DialogueTriggerPoint" to="." method="_on_dialogue_trigger_point_body_entered"]
