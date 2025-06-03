@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwte3fw544lcp"]
+
+[ext_resource type="Texture2D" uid="uid://bu01j7fn7i47u" path="res://assets/tracks/CP_V1.1.0_nyknck/CP_V1.1.0_nyknck/Animations/BL001.png" id="1_agwg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lf357"]
+size = Vector2(48, 20)
+
+[node name="Predios" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -40)
+texture = ExtResource("1_agwg2")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(32, 30.9876, 160, 97.8321)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_lf357")

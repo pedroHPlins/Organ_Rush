@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0ycsxtpvq4j1"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1"]
+[ext_resource type="Script" uid="uid://ccnmiua3axe6s" path="res://Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cgtql4heamlct" path="res://assets/Sprites/Police.png" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
