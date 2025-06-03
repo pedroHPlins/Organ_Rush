@@ -88,7 +88,7 @@ func _on_dialogue_trigger_point_body_entered(body):
 		start_tutorial_dialogue() 
 		
 		# Opcional: Desativar o trigger para não disparar de novo
-		# $DialogueTriggerPoint/CollisionShape2D.disabled = true 
+		$DialogueTriggerPoint/CollisionShape2D.disabled = true 
 		# Ou desativar a monitoração da Area2D
 		# $DialogueTriggerPoint.monitoring = false
 		# Ou remover o trigger da cena

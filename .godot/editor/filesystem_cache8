@@ -1,15 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1748842288
-default_env.tres::Environment::5480815651952970539::1748842253::0::1::::<><>::
-DialogeTest.gd::GDScript::-1::1748841851::0::1::::<>Node<>::
+::res://::1748906144
+default_env.tres::Environment::5480815651952970539::1748880315::0::1::::<><>::
+DialogeTest.gd::GDScript::-1::1748880315::0::1::::<>Node<>::
 DialogueBox.gd::GDScript::-1::1748842202::0::1::::<>CanvasLayer<>::
-DialogueBox.tscn::PackedScene::2927335928668970537::1748842253::0::1::::<><>::res://DialogueBox.gd<>uid://cgtql4heamlct::::res://assets/Sprites/Police.png
+DialogueBox.tscn::PackedScene::2927335928668970537::1748880172::0::1::::<><>::res://DialogueBox.gd<>uid://cgtql4heamlct::::res://assets/Sprites/Police.png
 export_presets.cfg::TextFile::-1::1747777593::0::1::::<><>::
 icon.png::CompressedTexture2D::8199163020172649188::1747696983::1747783251::1::::<><>::
-Main.tscn::PackedScene::1304137150522173675::1748842054::0::1::::<><>::uid://dehbevv0spxwn::::res://Track.tscn<>res://DialogeTest.gd<>uid://c0ycsxtpvq4j1::::res://Player.tscn<>uid://bhya2bc5atgq0::::res://DialogueBox.tscn
+Main.tscn::PackedScene::1304137150522173675::1748880315::0::1::::<><>::uid://dehbevv0spxwn::::res://Track.tscn<>res://DialogeTest.gd<>uid://c0ycsxtpvq4j1::::res://Player.tscn<>uid://bhya2bc5atgq0::::res://DialogueBox.tscn<>uid://do20atxlgd7ga::::res://icon.png
 Player.gd::GDScript::-1::1748841230::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::6577262340808861744::1748842054::0::1::::<><>::res://Player.gd<>uid://cgtql4heamlct::::res://assets/Sprites/Police.png
-Track.tscn::PackedScene::7454537066670039501::1748842054::0::1::::<><>::
+Player.tscn::PackedScene::6577262340808861744::1748880172::0::1::::<><>::res://Player.gd<>uid://cgtql4heamlct::::res://assets/Sprites/Police.png
+Track.tscn::PackedScene::7454537066670039501::1748880172::0::1::::<><>::
 ::res://addons/::1748552098
 ::res://addons/dialogue_manager/::1748552100
 constants.gd::GDScript::-1::1748552099::0::1::::<>Node<>::
@@ -79,7 +79,14 @@ main_view.gd::GDScript::-1::1748552100::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1748552100::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
 settings_view.gd::GDScript::-1::1748552100::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1748552100::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://assets/::1748842288
+::res://assets/::1748907511
+::res://assets/background/::1748907140
+bg_menu.jpg::CompressedTexture2D::7442682537314805668::1748907087::1748907140::1::::<><>::
+::res://assets/fonts/::1748907893
+MotionControl-Bold.otf::FontFile::8033750390403094344::1420628459::1748907541::1::::<><>::
+MotionControl-BoldItalic.otf::FontFile::6549893971923977933::1420628838::1748907541::1::::<><>::
+Read Me If You Feel Like It.txt::TextFile::-1::1420625834::0::1::::<><>::
+The Bomb Sound Italic.otf::FontFile::272365285898282479::1632327290::1748907896::1::::<><>::
 ::res://assets/Sprites/::1748842288
 placeholderNpc.jpg::CompressedTexture2D::6226985470818525005::1748841785::1748842288::1::::<><>::
 Police.png::CompressedTexture2D::5234190256331760675::1421421248::1748392087::1::::<><>::
