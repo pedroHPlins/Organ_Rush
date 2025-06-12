@@ -44,3 +44,7 @@ func _desacelarCarro(delta):
 		speed -= aceleracao * 5 * delta 
 	else:
 		speed = 0
+
+
+func _on_timer_timeout():
+	queue_free()

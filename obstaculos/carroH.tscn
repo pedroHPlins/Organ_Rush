@@ -7,7 +7,7 @@
 size = Vector2(20, 40)
 
 [node name="CarroH" type="CharacterBody2D"]
-collision_layer = 3
+collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_26dq6")
 
@@ -21,3 +21,9 @@ shape = SubResource("RectangleShape2D_8pvo7")
 position = Vector2(0, 26)
 scale = Vector2(3.04, 1)
 target_position = Vector2(0, 21)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
