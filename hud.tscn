@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi2yfg7oyr26h"]
+[gd_scene load_steps=5 format=3 uid="uid://bi2yfg7oyr26h"]
 
 [ext_resource type="Script" uid="uid://ci3pmipwbaafj" path="res://hud.gd" id="1_64ctp"]
 [ext_resource type="FontFile" uid="uid://d46203mqjs4f" path="res://assets/fonts/The Bomb Sound Italic.otf" id="2_8sq4i"]
+[ext_resource type="AudioStream" uid="uid://dlfwqf38wtpbj" path="res://assets/467882__samsterbirdies__beep-warning.ogg" id="3_alarm_sound"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ctp"]
 bg_color = Color(0.652506, 0, 0.157565, 1)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_64ctp")
+
+[node name="AlarmSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_alarm_sound")
+volume_db = -5.0
 
 [node name="OrganIntegrity" type="ProgressBar" parent="."]
 layout_direction = 2
