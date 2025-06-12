@@ -21,6 +21,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_64ctp")
 value = 100.0
 
 [node name="OrganLabel" type="Label" parent="OrganIntegrity"]
+layout_mode = 0
 offset_left = -9.0
 offset_top = -29.0
 offset_right = 278.0
