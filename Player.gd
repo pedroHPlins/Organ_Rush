@@ -4,14 +4,14 @@ extends CharacterBody2D
 
 # Configurações de movimento
 @export var max_speed = 540
-@export var acceleration = 100
+@export var acceleration = 85
 @export var steering = 2.0
 @export var friction = 0.99
 @export var drift_factor = 0.95
 
 # Configurações de dano
 @export var collision_damage = 10
-@export var min_collision_speed = 50  # Velocidade mínima para causar dano
+@export var min_collision_speed = 30  # Velocidade mínima para causar dano
 @export var damage_cooldown = 1.0     # Tempo entre danos consecutivos
 
 var last_damage_time = 0.0
@@ -62,8 +62,7 @@ func handle_collision_damage(delta):
 				last_damage_time = 0.0
 	# Verifica colisões apenas se pode tomar dano
 		if can_take_damage && get_slide_collision_count() > 0:
-			var current_speed = velocity.length()
-		
+			var current_speed = speed		
 		# Só causa dano se a velocidade for significativa
 			if current_speed > min_collision_speed:
 			# Calcula dano proporcional à velocidade
@@ -71,7 +70,7 @@ func handle_collision_damage(delta):
 				hud.damage_organ(ceil(damage))
 			
 				# Reduz velocidade no impacto (efeito de batida)
-				velocity = velocity * 0.7
+				speed = speed * 0.7
 			
 				# Ativa cooldown
 				can_take_damage = false
