@@ -1,6 +1,7 @@
 extends CharacterBody2D
 # Iniciar a HUD
 @onready var hud = get_tree().get_nodes_in_group("hud")[0]
+@onready var engine_sound = $EngineSound
 
 # Configurações de movimento
 @export var max_speed = 540
@@ -19,6 +20,7 @@ var can_take_damage = true
 
 var speed = 0
 var drift = false
+var engine_playing = false
 
 
 func _physics_process(delta):
@@ -39,6 +41,9 @@ func _physics_process(delta):
 	move_and_slide()
 	velocity = velocity
 	
+	# Controlar som do motor baseado no movimento
+	control_engine_sound()
+	
 	# Atualiza Velocimetro HUD
 	if hud:
 		var speed = velocity.length()
@@ -52,6 +57,28 @@ func _physics_process(delta):
 	# Efeito de derrapagem
 	if drift and abs(input.x) > 0.1 and speed > 100:
 		emit_drift_particles()
+
+func control_engine_sound():
+	# Toca o som do motor quando o carro está se movendo
+	var current_speed = abs(speed)
+	
+	if current_speed > 50 and not engine_playing:
+		# Inicia o som do motor
+		if engine_sound:
+			engine_sound.play()
+			engine_playing = true
+			print("Motor ligado!")
+	elif current_speed <= 50 and engine_playing:
+		# Para o som do motor
+		if engine_sound:
+			engine_sound.stop()
+			engine_playing = false
+			print("Motor desligado!")
+	
+	# Ajusta o volume baseado na velocidade (opcional)
+	if engine_playing and engine_sound:
+		var volume_factor = clamp(current_speed / max_speed, 0.3, 1.0)
+		engine_sound.volume_db = -20.0 + (volume_factor * 15.0)  # Volume entre -20db e -5db
 		
 func handle_collision_damage(delta):
 		# Atualiza temporizador de cooldown

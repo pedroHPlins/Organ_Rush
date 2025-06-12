@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1c773tfclqe"]
+[gd_scene load_steps=5 format=3 uid="uid://dokrs5xuelldh"]
 
 [ext_resource type="Texture2D" uid="uid://debj5np1phhvw" path="res://assets/background/bg_menu.jpg" id="1_6y4re"]
 [ext_resource type="Script" uid="uid://b0k787geuon71" path="res://MainMenu.gd" id="1_jjnjv"]
 [ext_resource type="FontFile" uid="uid://d46203mqjs4f" path="res://assets/fonts/The Bomb Sound Italic.otf" id="2_foe57"]
+[ext_resource type="AudioStream" uid="uid://bwpdlfdfp8o1r" path="res://assets/811473__cvltiv8r__guitar-mute-pluck-riff-122bpm.wav" id="4_menu_music"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jjnjv")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_menu_music")
+volume_db = -10.0
+autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
