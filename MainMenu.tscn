@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dokrs5xuelldh"]
+[gd_scene load_steps=4 format=3 uid="uid://c1c773tfclqe"]
 
 [ext_resource type="Texture2D" uid="uid://debj5np1phhvw" path="res://assets/background/bg_menu.jpg" id="1_6y4re"]
-[ext_resource type="Script" path="res://MainMenu.gd" id="1_jjnjv"]
+[ext_resource type="Script" uid="uid://b0k787geuon71" path="res://MainMenu.gd" id="1_jjnjv"]
 [ext_resource type="FontFile" uid="uid://d46203mqjs4f" path="res://assets/fonts/The Bomb Sound Italic.otf" id="2_foe57"]
 
 [node name="MainMenu" type="Control"]
@@ -54,8 +54,8 @@ offset_top = 429.0
 offset_right = 708.0
 offset_bottom = 509.0
 theme_override_colors/font_hover_color = Color(0.690196, 0, 0, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("2_foe57")
 theme_override_font_sizes/font_size = 50

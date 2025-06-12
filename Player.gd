@@ -89,7 +89,7 @@ func apply_movement(input, delta):
 	
 	# Converter velocidade para vetor
 	var forward_vector = Vector2(cos(rotation), sin(rotation))
-	velocity = forward_vector * speed
+	velocity = forward_vector * speed 
 	
 	# Reduzir velocidade lateral ao derrapar
 	if drift:

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm04sguyan52b"]
+
+[ext_resource type="Texture2D" uid="uid://dr5evimc7wf4h" path="res://assets/tracks/CP_V1.1.0_nyknck/Animations/carros/sprite_43.png" id="1_aaaor"]
+[ext_resource type="Script" uid="uid://cq3e6tueg147l" path="res://obstaculos/collision_shape_2d.gd" id="2_76a8q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76a8q"]
+size = Vector2(40, 9)
+
+[node name="CarroV" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_76a8q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aaaor")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 5.5)
+shape = SubResource("RectangleShape2D_76a8q")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-25, 5)
+scale = Vector2(1, 6.41931)
+target_position = Vector2(-33, 0)
+collision_mask = 2
