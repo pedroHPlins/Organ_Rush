@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi2yfg7oyr26h"]
+
+[ext_resource type="Script" uid="uid://ci3pmipwbaafj" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="FontFile" uid="uid://d46203mqjs4f" path="res://assets/fonts/The Bomb Sound Italic.otf" id="2_8sq4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ctp"]
+bg_color = Color(0.652506, 0, 0.157565, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_64ctp")
+
+[node name="OrganIntegrity" type="ProgressBar" parent="."]
+layout_direction = 2
+offset_left = 853.0
+offset_top = 61.0
+offset_right = 1123.0
+offset_bottom = 95.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_styles/fill = SubResource("StyleBoxFlat_64ctp")
+value = 100.0
+
+[node name="OrganLabel" type="Label" parent="OrganIntegrity"]
+offset_left = -9.0
+offset_top = -29.0
+offset_right = 278.0
+offset_bottom = 8.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 30
+text = "INTEGRIDADE DO ORGÃO"
+
+[node name="SpeedLabel" type="Label" parent="."]
+z_index = 1
+offset_left = -3.0
+offset_top = 7.0
+offset_right = 258.0
+offset_bottom = 146.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 480.0
+offset_top = 39.0
+offset_right = 702.0
+offset_bottom = 108.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 40
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1

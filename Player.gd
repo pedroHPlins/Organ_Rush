@@ -1,14 +1,25 @@
 extends CharacterBody2D
+# Iniciar a HUD
+@onready var hud = get_tree().get_nodes_in_group("hud")[0]
 
 # Configurações de movimento
-@export var max_speed = 250
-@export var acceleration = 80
-@export var steering = 2.5
-@export var friction = 0.97
+@export var max_speed = 540
+@export var acceleration = 100
+@export var steering = 2.0
+@export var friction = 0.99
 @export var drift_factor = 0.95
+
+# Configurações de dano
+@export var collision_damage = 10
+@export var min_collision_speed = 50  # Velocidade mínima para causar dano
+@export var damage_cooldown = 1.0     # Tempo entre danos consecutivos
+
+var last_damage_time = 0.0
+var can_take_damage = true
 
 var speed = 0
 var drift = false
+
 
 func _physics_process(delta):
 	# Capturar entrada do jogador
@@ -28,9 +39,45 @@ func _physics_process(delta):
 	move_and_slide()
 	velocity = velocity
 	
+	# Atualiza Velocimetro HUD
+	if hud:
+		var speed = velocity.length()
+		var speed_kmh = speed / 3.6  # Converte para km/h
+		hud.update_speed(speed_kmh)
+	else:
+		print("HUD não encontrado!")
+		
+	handle_collision_damage(delta)
+	
 	# Efeito de derrapagem
 	if drift and abs(input.x) > 0.1 and speed > 100:
 		emit_drift_particles()
+		
+func handle_collision_damage(delta):
+		# Atualiza temporizador de cooldown
+		if !can_take_damage:
+			last_damage_time += delta
+			if last_damage_time >= damage_cooldown:
+				can_take_damage = true
+				last_damage_time = 0.0
+	# Verifica colisões apenas se pode tomar dano
+		if can_take_damage && get_slide_collision_count() > 0:
+			var current_speed = velocity.length()
+		
+		# Só causa dano se a velocidade for significativa
+			if current_speed > min_collision_speed:
+			# Calcula dano proporcional à velocidade
+				var damage = collision_damage * (current_speed / max_speed)
+				hud.damage_organ(ceil(damage))
+			
+				# Reduz velocidade no impacto (efeito de batida)
+				velocity = velocity * 0.7
+			
+				# Ativa cooldown
+				can_take_damage = false
+				last_damage_time = 0.0
+				
+				print("Colisão detectada")
 
 func apply_movement(input, delta):
 	# Aceleração e freio
